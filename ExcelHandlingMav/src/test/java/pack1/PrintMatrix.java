@@ -13,11 +13,11 @@ public class PrintMatrix {
 		FileInputStream stream= new FileInputStream(xlpath);
 		Workbook wb = WorkbookFactory.create(stream);
 		Sheet s = wb.getSheet("Sheet3");	
-		Cell c ;
+		Cell c = null;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-		/*	c.getRow().getCell(j);
-			System.out.println(c+" ");*/
+			c.getRow().getCell(j);
+			System.out.println(c+" ");
 			}
 			System.out.println();
 		}
